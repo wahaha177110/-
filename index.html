@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>纹样交互演示视频</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #0b0b0b;
+      color: #f5f0e8;
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 24px;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 900px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: 28px;
+      letter-spacing: 2px;
+      font-weight: 600;
+    }
+
+    .subtitle {
+      margin: 0 0 24px;
+      font-size: 15px;
+      color: #c9bfae;
+      line-height: 1.7;
+    }
+
+    .video-box {
+      width: 100%;
+      background: #000;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.45);
+    }
+
+    video {
+      width: 100%;
+      display: block;
+      background: #000;
+    }
+
+    .info {
+      margin-top: 24px;
+      font-size: 14px;
+      color: #b8ad9b;
+      line-height: 1.8;
+    }
+
+    .tag {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 7px 14px;
+      border: 1px solid rgba(245, 240, 232, 0.3);
+      border-radius: 999px;
+      font-size: 13px;
+      color: #e8dcc8;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <h1>纹样交互</h1>
+
+    <p class="subtitle">
+      彝族传统纹样数字交互设计<br>
+      TouchDesigner 交互演示视频
+    </p>
+
+    <div class="video-box">
+      <video autoplay muted controls playsinline poster="">
+        <source src="演示视频.mp4" type="video/mp4">
+        您的浏览器不支持视频播放。
+      </video>
+    </div>
+
+    <div class="info">
+      <p>
+        本作品通过身体动作与数字纹样进行互动，<br>
+        探索传统纹样在数字媒体语境下的跨文化动态表达。
+      </p>
+
+      <div class="tag">
+        非遗纹样 × 交互艺术 × 数字媒体
+      </div>
+    </div>
+  </main>
+</body>
+</html>
