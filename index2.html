@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>四季花香</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #050505;
+      color: #ffffff;
+      font-family: "Microsoft YaHei", Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 24px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 520px;
+      background: #151515;
+      border-radius: 26px;
+      overflow: hidden;
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.65);
+      text-align: center;
+    }
+
+    .cover {
+      width: 100%;
+      display: block;
+    }
+
+    .content {
+      padding: 28px;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: 30px;
+      font-weight: 700;
+    }
+
+    .subtitle {
+      margin: 0 0 26px;
+      color: #cfcfcf;
+      font-size: 16px;
+    }
+
+    audio {
+      width: 100%;
+      margin-top: 6px;
+    }
+
+    .tip {
+      margin-top: 20px;
+      color: #999;
+      font-size: 14px;
+    }
+
+    .error {
+      display: none;
+      margin-top: 16px;
+      color: #ff7777;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <!-- 封面图片 -->
+    <img class="cover" src="南门.png" alt="四季花香封面" />
+
+    <div class="content">
+      <h1>四季花香</h1>
+      <p class="subtitle">扫码收听音频</p>
+
+      <!-- 音频播放器 -->
+      <audio id="audioPlayer" controls preload="metadata">
+        <source src="四季花香.mp3" type="audio/mpeg" />
+        你的浏览器不支持音频播放。
+      </audio>
+
+      <div class="tip">点击播放按钮开始收听</div>
+
+      <div class="error" id="errorMsg">
+        音频加载失败，请检查“四季花香.mp3”是否和 index.html 在同一个文件夹。
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const audio = document.getElementById("audioPlayer");
+    const errorMsg = document.getElementById("errorMsg");
+
+    audio.addEventListener("error", function () {
+      errorMsg.style.display = "block";
+    });
+  </script>
+</body>
+</html>
